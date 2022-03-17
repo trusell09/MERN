@@ -10,16 +10,30 @@ const Petform = ()=>{
     //pet image 
     let [petImg, setPetImg] = useState("")
 
+    
+    const showPetImageError = ()=>{
+        if(petImg.length==0){
+            return <p className='text-danger'>Image Required!</p>
+        }else{
+            return null
+        } 
+    }
+    
     return (
     <>
     <form>
         <div className="form-group">
             <label htmlFor="">Name: </label>
             <input type="text" name="" id="" className="form-control" onChange={(e)=>setName(e.target.value)}/>
+                {/* ternary operator below, simple way of doing if statement*/}
+                {name.length<4 && name.length>0? <p className = "text-danger">Name must be at least 4 characters</p>: ""}
         </div>
         <div className="form-group">
             <label htmlFor="">Age: </label>
             <input type="number" name="" id="" className="form-control" onChange={(e)=>setAge(e.target.value)} />
+            {
+                age<0? <p className='text-danger'> Please Enter Valid Age</p> : null
+            }
         </div>
         <div className="form-group">
             <label htmlFor="">Appointment Date: </label>
@@ -28,6 +42,7 @@ const Petform = ()=>{
         <div className="form-group">
             <label htmlFor="">Pet Image: </label>
             <input type="text" name="" id="" className="form-control" onChange={(e)=>setPetImg(e.target.value)}/>
+            {showPetImageError()}
         </div>
         <input type="submit" value="Make Appointment" className="btn btn-success mt-3" />
         {/* mt-3 above is for margin in bootstrap */}
