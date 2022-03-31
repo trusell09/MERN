@@ -7,7 +7,6 @@ import {
 
 const AllAuthors = (props) => {
     
-    //state variable for all ninjas
     const [authorList, setAuthorList] = useState([]);
 
     useEffect(()=> {
@@ -27,7 +26,7 @@ const AllAuthors = (props) => {
             .then(response=>{
                 console.log("RESPONSE .DELETE:", response)
                         let filteredList = authorList.filter((authorObject)=>{
-                return authorObject._id != AuthorId //return NinjaIds that are not being deleted
+                return authorObject._id != AuthorId 
                 })
                 setAuthorList(filteredList)
             })
