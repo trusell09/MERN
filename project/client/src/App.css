@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.profilePic {
+  width: 70%;
+  border-radius: 25px;
+  margin-top: 1vw;
+}
+
+.afterText {
+  opacity: 0.5;
+  font-size: 0.9vw;
+}
+
+.logout {
+  position: absolute;
+  position: fixed;
+  background-color: blue;
+  border-radius: 20px;
+  color: whitesmoke;
+  top: 1vw;
+  right: 1vw;
+}
+
+.postSize {
+  width: 40vw;
+  border-radius: 20px;
+  margin: 0px auto;
+}
+
+.centerMe {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.barOne {
+  position: absolute;
+  position: fixed;
+  background-color: gray;
+  border-radius: 20px;
+  margin-top: 3vw;
+  width: 20vw;
+  height: 90%;
+  left: 10vw;
+} 
+
+
+
+.roundMe {
+  border-radius: 10px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
