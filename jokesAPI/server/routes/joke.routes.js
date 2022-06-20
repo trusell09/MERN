@@ -1,7 +1,6 @@
 const JokeController = require('../controllers/joke.controller');
 
 
-
 //routes file works as one big function. using app.get to export information
 module.exports = (app) =>{
     app.get('/api/hello', JokeController.helloWorld)
